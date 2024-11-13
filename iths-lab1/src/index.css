@@ -1,68 +1,161 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+/* Container för hela listan */
+.game-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  gap: 15px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Styling för varje spelobjekt i listan */
+.game-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-button {
+/* Hover-effekt för att göra objektet mer interaktivt */
+.game-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling för spelbilden */
+.game-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  object-fit: cover;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Styling för spelnamnet */
+.game-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin-left: 10cap;
 }
+h1{
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgb(84, 122, 114);
+
+
+}
+
+
+AddComponent.css
+css
+
+/* Container för hela komponenten */
+.add-component {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #f9f9f9;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+max-width: 300px;
+margin: 0 auto;
+}
+
+/* Styling för inmatningsfälten */
+.input-field {
+width: 50%;
+padding: 15px;
+margin: 7px 0;
+border: 1px solid #7c7c7c;
+border-radius: 8px;
+font-size: 1em;
+transition: border-color 0.3s;
+text-align: center;
+
+}
+
+.input-field:focus {
+border-color: #007bff;
+outline: none;
+box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Styling för knappen */
+.button-add {
+width: 53%;
+height: 5cap;
+padding: 10px;
+font-size: 1em;
+font-weight: bold;
+color: #ffffff;
+background-color: #923f3d;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-add:hover {
+background-color: #df514e;
+}
+
+.button-add:active {
+transform: scale(0.98);
+}
+.ButtonGames {
+background-color: #923f3d;
+color: white; /* Textfärg */
+padding: 0.75rem 1.5rem; /* Inre avstånd (padding) */
+border: none; /* Ingen kantlinje */
+border-radius: 8px; /* Rundade hörn */
+font-size: 1rem; /* Textstorlek */
+font-weight: bold; /* Fet text */
+cursor: pointer; /* Muspekare ändras till pekare */
+transition: all 0.3s ease; /* Smidig övergång för hover-effekten */
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Lätt skugga */
+position: fixed; /* Gör att knappen hålls kvar i vänstra hörnet av skärmen */
+top: 1rem; /* Avstånd från toppen */
+left: 1rem; /* Avstånd från vänstra kanten */
+}
+
+.ButtonGames:hover {
+background-color: #df514e;
+transform: translateY(-2px); /* Lyft knappen lite vid hover */
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Starkare skugga vid hover */
+}
+
+.titelconsole {
+font-size: 3rem;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+color: #8d8d8d; /* Guldliknande färg */
+background: linear-gradient(120deg, #000000, #802525, #35352d);
+background-clip: text;
+color: transparent;
+position: relative;
+overflow: hidden;
+}
+
+.titelconsole::before {
+content: "";
+position: absolute;
+top: 0;
+left: -100%; /* Startar utanför texten */
+height: 100%;
+width: 100%;
+background: linear-gradient(120deg, transparent, rgba(237, 153, 153, 0.6), transparent);
+transform: skewX(-20deg);
+animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+0% { left: -100%; }
+100% { left: 100%; }
+}
+
+
