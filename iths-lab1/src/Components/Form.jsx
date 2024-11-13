@@ -6,7 +6,7 @@ function Form (props) {
     const [image, setImage] = useState('');
 
     const handleAddClick = () => {
-        props.onAddGame(name, image);
+        props.onAdd(name, image);
         console.log("konsolnamn:", name);
         console.log("image ", image); 
         setName("");

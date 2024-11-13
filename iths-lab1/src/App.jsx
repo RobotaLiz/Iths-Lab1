@@ -1,10 +1,15 @@
 import Games from './Components/Games';
 import Consoles from './Components/Consoles';
 import Form from './Components/Form';
+import Header from './Components/Header';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react'
 import './App.css'
 
+
 function App() {
+
+
   
   // en lista av konsoller 
   const [consoles, setConsoles] = useState([
@@ -35,15 +40,31 @@ function App() {
     setConsoles([...consoles, { name, image }]);
   };
 
-  return (
-    <>
-    <button className='ButtonGames'>Go to games</button>
-     <Games AllGames = {games} />
-     <Form onAddGame= {addGame}/>
-     <Consoles AllConsoles = {consoles} />
-     <Form onAddGame= {addConsole}/>
-    </>
-  )
+   return (
+    <Router>
+      <div>
+        <Header />
+        <Routes>
+          <Route path="/consoles" 
+            element=
+            {
+              <>
+                <Consoles AllConsoles={consoles} />
+                <Form onAdd= {addConsole}/>
+              </>
+            } />
+          <Route path="/games" 
+            element=
+            {
+              <>
+                <Games AllGames={games}  />
+                <Form onAdd= {addGame}/>
+              </>
+            } />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App
