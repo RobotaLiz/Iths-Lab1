@@ -45,6 +45,14 @@ function App() {
       <div>
         <Header />
         <Routes>
+          <Route path='/'
+            element=
+            {
+              <>
+                <h1>Welcome to Liza's Game Store! 🎮</h1>
+                <p className='infotext'>Here at Liza's Game Store, we’re passionate about all things gaming! Whether you're a seasoned gamer, a casual player, or just getting started, we’ve got something for everyone. From the latest blockbuster releases to timeless classics, our collection is handpicked to cater to every kind of gamer out there.</p>
+              </>
+            }/>
           <Route path="/consoles" 
             element=
             {
