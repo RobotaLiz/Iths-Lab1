@@ -2,6 +2,7 @@ import Games from './Components/Games';
 import Consoles from './Components/Consoles';
 import Form from './Components/Form';
 import Header from './Components/Header';
+import { useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react'
 import './App.css'
@@ -39,6 +40,10 @@ function App() {
   const addConsole = (name, image) => {
     setConsoles([...consoles, { name, image }]);
   };
+
+  useEffect(() => {
+    console.log('En ny konsol eller ett nytt spel har lagts till!');
+  }, [games, consoles]);
 
    return (
     <Router>
