@@ -50,7 +50,7 @@ function App() {
             {
               <>
                 <Consoles AllConsoles={consoles} />
-                <Form onAdd= {addConsole}/>
+                <Form onAdd= {addConsole} placeholderText={"Console name:"}/>
               </>
             } />
           <Route path="/games" 
@@ -58,7 +58,7 @@ function App() {
             {
               <>
                 <Games AllGames={games}  />
-                <Form onAdd= {addGame}/>
+                <Form onAdd= {addGame}placeholderText={"Game name:"}/>
               </>
             } />
         </Routes>

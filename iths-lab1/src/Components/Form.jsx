@@ -24,7 +24,7 @@ function Form (props) {
       
             <input 
                 className="input-field"
-                placeholder="Console name"
+                placeholder={props.placeholderText}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
