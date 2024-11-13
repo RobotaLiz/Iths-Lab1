@@ -38,7 +38,7 @@
 .game-name {
   font-size: 1.2em;
   font-weight: 600;
-  color: #333;
+  color: #333333;
   margin-left: 10cap;
 }
 h1{
@@ -93,7 +93,7 @@ padding: 10px;
 font-size: 1em;
 font-weight: bold;
 color: #ffffff;
-background-color: #923f3d;
+background-color: #463d92;
 border: none;
 border-radius: 8px;
 cursor: pointer;
@@ -108,7 +108,7 @@ background-color: #df514e;
 transform: scale(0.98);
 }
 .ButtonGames {
-background-color: #923f3d;
+background-color: #f6f6f6;
 color: white; /* Textfärg */
 padding: 0.75rem 1.5rem; /* Inre avstånd (padding) */
 border: none; /* Ingen kantlinje */
@@ -124,7 +124,7 @@ left: 1rem; /* Avstånd från vänstra kanten */
 }
 
 .ButtonGames:hover {
-background-color: #df514e;
+background-color: #4e5fdf;
 transform: translateY(-2px); /* Lyft knappen lite vid hover */
 box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Starkare skugga vid hover */
 }
@@ -134,7 +134,7 @@ font-size: 3rem;
 font-weight: bold;
 font-family: Arial, Helvetica, sans-serif;
 color: #8d8d8d; /* Guldliknande färg */
-background: linear-gradient(120deg, #000000, #802525, #35352d);
+background: linear-gradient(120deg, #000000, #2a2580, #35352d);
 background-clip: text;
 color: transparent;
 position: relative;
@@ -148,7 +148,7 @@ top: 0;
 left: -100%;
 height: 100%;
 width: 100%;
-background: linear-gradient(120deg, transparent, rgba(237, 153, 153, 0.6), transparent);
+background: linear-gradient(120deg, transparent, rgba(18, 15, 140, 0.6), transparent);
 transform: skewX(-20deg);
 animation: shimmer 2s infinite;
 }
